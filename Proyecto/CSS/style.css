@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins: 200,300,400,500,600,700,800,900&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: rgb(92, 158, 158);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container
+{
+position: relative;
+width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    background: #FFF;
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 1fr  2fr;
+    box-shadow: 0 35px 5px rgba(0,0,0,0.1);
+}
+
+.container .left_side{
+    position: relative;
+    background: #288f64;
+    padding: 40px;
+
+}
+.container .right_side{
+    position: relative;
+    background: #FFF;
+    padding: 40px;
+    
+}
+
+.profileText{
+position: relative;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding-bottom: 20px;
+border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.profileText .imgBx
+{
+    position: relative;
+    width:  200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.profileText .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.profileText h2{
+    color: #FFF;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+.profileText h2 span{
+    font-size: 0.8em;
+    font-weight: 300 ;
+}
+
+.contactInfo
+{
+    padding-top: 30px;
+}
+.title
+{
+    color:#FFF;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.contactInfo ul{
+    position: relative;
+}
+
+.contactInfo ul li
+{
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+.contactInfo ul li .icon
+{
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color:#1e41db;
+}
+.contactInfo  ul li span
+{
+    color: #f9f9fa;
+}
+
+.contactInfo.education li
+{
+    margin-bottom: 15px;
+}
+.contactInfo.education h5{
+ color: #1e41db;
+ font-weight: 500;
+}
+.contactInfo.education h4{
+    color: #f9f9fa;
+    font-weight: 500;
+   }
+.contactInfo.education h4:nth-child(3){
+    color: #f9f9fa;
+    font-weight: 500;
+   }
+
+.contactInfo.idiomas .percent
+{
+    position: relative;
+    width: 100%;
+    height:  6px;
+    background: rgb(25, 26, 25);
+    display: block;
+    margin-top:5px;
+}  
+.contactInfo.idiomas .percent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #2de608;
+}
+
+.container .right_side{
+    position: relative;
+    background: #FFF;
+    padding: 40px;
+}
+.about
+{
+    margin-bottom: 50px;
+}
+.about:last-child
+{
+    margin-bottom: 0;
+}
+.title2{
+    color: #3acc9b;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+p{
+    color: #333;
+}
+
+.about .box
+{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0
+}
+
+.about .box .Actualidad
+{
+    min-width: 150px;
+
+}
+.about .box .Actualidad h5
+{
+    text-transform: uppercase;
+    color: rgb(24, 151, 119);
+    font-weight: 600;
+
+}
+.about .box .text h4{
+    text-transform: uppercase;
+    color:rgb(24, 151, 119);
+    font-size: 16px;
+}
+
+.Actitudes .box{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+
+}
+.Actitudes .box h4{
+    text-transform: uppercase;
+    color: rgb(24, 151, 119);
+    font-weight: 500;
+}
+.Actitudes .box .percent{
+ position: relative;
+ width: 100%;
+ height: 10px;
+ background: rgb(29, 32, 30);
+}
+.Actitudes .box .percent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: rgb(24, 151, 119);
+}
+
+.Intereses ul
+{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.Intereses ul li
+{
+    list-style: none;
+    color:rgb(25, 26, 25);
+    font-weight: 500;
+    margin: 10px 0;
+}
+.Intereses ul li .fa
+{
+   color: rgb(24, 151, 119);
+   font-size: 18px;
+}
+
+@media (max-width: 1000px)
+{
+    .container
+    {
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .Intereses ul {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (max-width: 600px)
+{
+    .about .box{
+        flex-direction: column;
+    }
+    .about .box .Actualidad{
+       
+        margin-bottom: 5px;
+    }
+    .Intereses ul {
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .Actitudes .box{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+
+.btn{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+
+
